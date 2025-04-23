@@ -1,0 +1,7 @@
+# Environment Variables
+PORT=3000
+YOUTUBE_API_KEY=your_youtube_api_key_here
+
+# Additional API keys for future implementation
+# TIKTOK_API_KEY=your_tiktok_api_key_here
+# INSTAGRAM_API_KEY=your_instagram_api_key_here

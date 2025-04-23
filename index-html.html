@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashtag Video Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hashtag Video Search</h1>
+            <p>Search for videos by hashtag across different platforms</p>
+        </header>
+        
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="hashtag-input" placeholder="Enter hashtag (without #)">
+                <select id="platform-select">
+                    <option value="youtube">YouTube</option>
+                    <option value="tiktok" disabled>TikTok (Coming Soon)</option>
+                    <option value="instagram" disabled>Instagram (Coming Soon)</option>
+                </select>
+                <select id="time-range">
+                    <option value="day">Last 24 hours</option>
+                    <option value="week">Last 7 days</option>
+                    <option value="month">Last 30 days</option>
+                </select>
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+        
+        <div class="results-container">
+            <div class="results-header">
+                <h2 id="results-title">Search Results</h2>
+                <div class="export-buttons">
+                    <button id="export-csv" disabled>Export CSV</button>
+                    <button id="export-excel" disabled>Export Excel</button>
+                </div>
+            </div>
+            
+            <div id="loader" class="hidden">
+                <div class="spinner"></div>
+                <p>Searching for videos...</p>
+            </div>
+            
+            <div id="error-message" class="hidden"></div>
+            
+            <table id="results-table" class="hidden">
+                <thead>
+                    <tr>
+                        <th>Video Title</th>
+                        <th>Channel</th>
+                        <th>Subscribers</th>
+                        <th>Upload Date</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                    <!-- Results will be inserted here -->
+                </tbody>
+            </table>
+            
+            <div id="no-results" class="hidden">
+                <p>No videos found for this hashtag. Try another search term or time range.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
